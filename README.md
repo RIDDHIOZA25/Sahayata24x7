@@ -100,20 +100,27 @@ open up localhost:
 ## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
-	#optinal
+	#optional (for Amazon Linux 2023)
 
-	sudo apt-get update -y
+	sudo yum update -y
 
-	sudo apt-get upgrade
+	sudo yum upgrade -y
 	
-	#required
+	#required (for Amazon Linux 2023)
 
-	curl -fsSL https://get.docker.com -o get-docker.sh
+	# Install Docker using yum
+	sudo yum install -y docker
 
-	sudo sh get-docker.sh
+	# Start Docker service
+	sudo systemctl start docker
 
-	sudo usermod -aG docker ubuntu
+	# Enable Docker to start on boot
+	sudo systemctl enable docker
 
+	# Add user to docker group
+	sudo usermod -aG docker ec2-user
+
+	# Apply group changes (logout and login again, or use newgrp)
 	newgrp docker
 	
 # 6. Configure EC2 as self-hosted runner:
