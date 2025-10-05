@@ -1,12 +1,10 @@
-# Build-a-Complete-Medical-Chatbot-with-LLMs-LangChain-Pinecone-Flask-AWS
-
 # How to run?
 ### STEPS:
 
 Clone the repository
 
 ```bash
-git clonehttps://github.com/entbappy/Build-a-Complete-Medical-Chatbot-with-LLMs-LangChain-Pinecone-Flask-AWS.git
+git https://github.com/RIDDHIOZA25/Sahayata24x7.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
@@ -29,7 +27,7 @@ pip install -r requirements.txt
 
 ```ini
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+GOOGLE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 
@@ -92,7 +90,7 @@ open up localhost:
 
 	
 ## 3. Create ECR repo to store/save docker image
-    - Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/medicalbot
+    - Save the URI: 697568246453.dkr.ecr.us-east-1.amazonaws.com/sahayata24x7
 
 	
 ## 4. Create EC2 machine (Ubuntu) 
@@ -134,4 +132,4 @@ open up localhost:
    - AWS_DEFAULT_REGION
    - ECR_REPO
    - PINECONE_API_KEY
-   - OPENAI_API_KEY
+   - GOOGLE_API_KEY
