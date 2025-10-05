@@ -83,7 +83,7 @@ def gemini_answer_from_context(question, context_docs, model: str = "gemini-1.5-
         print(f"Error generating content: {e}")
         return f"Error: {str(e)}"
 
-def run_gemini_rag(question: str, k: int = 3, model: str = "gemini-1.5-flash"):
+def run_gemini_rag(question: str, k: int = 3, model: str = "gemini-2.5-flash"):
     """Retrieve top-k documents using the existing `retriever`, then ask Gemini for an answer.
     Returns a dict with answer, sources (metadata.source), and the raw docs.
     """
@@ -130,7 +130,7 @@ def chat():
     try:
         response = run_gemini_rag(question=msg, k=3)
         print(f"Gemini response: {response['answer']}")
-    return str(response["answer"])
+        return str(response["answer"])
     except Exception as e:
         print(f"Error in chat: {e}")
         return f"Sorry, I encountered an error: {str(e)}"
